@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learning</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 300px;
+      border-radius: 50px;
+
+      box-shadow: 20px 20px 60px rgb(160, 160, 160),
+        -20px -20px 60px rgb(255, 255, 255);
+    }
+  </style>
+  <body>
+    <div>test</div>
+  </body>
+  <script>
+    "use strict";
+    let background = "rgb(200, 200, 200)";
+    console.log(background);
+    let body = document.querySelector("body");
+    let div = document.querySelector("div");
+    body.style.background = `${background}`;
+    div.style.background = `${background}`;
+
+    function random() {
+      return (
+        "#" +
+        ("000000" + Math.floor(Math.random() * 166777216).toString(16)).slice(
+          -6
+        )
+      );
+    }
+    let random1 = random();
+    let random2 = random();
+    console.log(random1);
+    body.style.background = `linear-gradient(to right, ${random1},${random2})`;
+  </script>
+</html>
